@@ -37,7 +37,7 @@ A proposta inicial do assistente de analisar empresas abertas e produzir parecer
 | D12 | Combinar dados sintéticos, públicos e reais | Confirmado em 04/11/2026; preservar origem e granularidade; integração de base real depende de disponibilidade e condições de utilização |
 | D13 | Over90 inclui atrasos a partir de 90 dias, inclusive | Confirmado pelo autor em 04/11/2026: `dias_atraso >= 90`; 89 dias fica fora, 90 e 91 dias entram. Demais componentes da métrica continuam em revisão |
 | D14 | Todos os indicadores Over usam limiar inclusivo | Confirmado em 04/11/2026: OverN enquadra `dias_atraso >= N`; aplicar a mesma convenção aos demais limiares, preservando as definições originais de fontes externas |
-| D15 | Repositório `banking-analytics-assistant` público | Destino confirmado pelo autor: `Henri-fernandes/banking-analytics-assistant`; criação verificada no GitHub; envio e deploy ainda pendentes |
+| D15 | Repositório `banking-analytics-assistant` público | Destino confirmado pelo autor: `Henri-fernandes/banking-analytics-assistant`; código enviado e verificado na `main` em 05/11/2026; deploy da aplicação ainda pendente |
 
 ## Escopo desejado, com detalhamento pendente
 
@@ -70,6 +70,8 @@ O autor informou que o repositório GitHub de destino ainda não existe. Nenhum 
 O autor forneceu o [repositório público](https://github.com/Henri-fernandes/banking-analytics-assistant) e autorizou continuar. A criação remota foi verificada; o Git local já está inicializado na branch `main`, inicialmente sem commits e sem remote configurado. A conta disponível nas integrações de GitHub não tem permissão de escrita nesse destino. A autenticação de `Henri-fernandes` foi solicitada, sem solicitar senha ou token pela conversa. A preparação do primeiro commit pode prosseguir sem publicar por outra conta.
 
 O `origin` foi configurado, os 37 testes passaram novamente e os 46 arquivos revisados foram registrados no commit inicial local `0a218e6`. A autoria usa o nome da conta de destino e seu email público noreply; isso não altera a autenticação. A verificação da API ainda informa ausência de permissão de escrita para a conta autenticada. Nenhum push foi executado.
+
+Após o autor concluir o login, a API confirmou `Henri-fernandes` com permissão de escrita. O primeiro push foi executado sem force, criando `main` no remoto; a API retornou o mesmo SHA local `a4681ad3bed282e55591620e0d3f69bf9f783082`. Autenticação e envio do código estão concluídos. Hospedagem, chave de inferência e prova com PC desligado continuam pendentes.
 
 O histórico anterior registra o estado da época; para a situação do envio, consulte [próximos passos](proximos-passos.md).
 

@@ -13,16 +13,16 @@ Atualizado em 05/11/2026. Este é um roteiro proposto de continuidade, não um p
 - Plano autorizado e implementado localmente: Python 3.12.16, Streamlit 1.66.0 e SQLite reconstruível; comandos reais no README.
 - Três cenários sintéticos manuais e 24 observações públicas SGS 21114 carregados; base real e gerador em escala não implementados.
 - 37 testes passando, incluindo interface e duas sessões com provedor controlado; servidor local respondeu HTTP 200.
-- Repositório público [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant) criado e verificado. Git local na `main`, com `origin` configurado e commit inicial `0a218e6` criado. Envio depende de autenticação com permissão no destino. Nenhum push/deploy ou chave de inferência configurados até esta atualização.
+- Repositório público [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant) com código enviado. Primeiro push da `main` confirmado em 05/11/2026, com `0a218e6` e `a4681ad`; SHA remoto conferido contra o local. Autenticação de `Henri-fernandes` com permissão de escrita verificada. Deploy e chaves de inferência ainda pendentes.
 - Nenhuma inferência real, teste das cotas da conta ou acesso por terceiro com PC desligado. A revisão visual de navegador foi interrompida pelo Computer Use por falta de verificação segura da URL.
 
 ## Próximo trabalho: publicar e verificar a prova na nuvem
 
 O autor autorizou a execução do [plano da prova funcional](superpowers/plans/2026-11-04-prova-conversacional-nuvem.md). A implementação local e suas evidências estão no [relatório](avaliacoes/prova-inicial.md). Retome a etapa externa do [guia operacional](operacao/prova-nuvem.md); não refaça o núcleo já testado.
 
-Concluir a revisão do primeiro commit e o envio ao repositório de destino. A autenticação disponível pertence a outra conta e não tem permissão de escrita nesse repositório; o autor precisa autenticar `Henri-fernandes` pelo GitHub CLI ou conectar a conta correspondente. Depois, configurar hospedagem e provedor sem custo. Não solicitar segredos na conversa; usar configuração privada na hospedagem. A revisão visual deverá ser retomada quando houver acesso seguro ao navegador.
+Configurar hospedagem e provedor sem custo, a partir do código já enviado à `main`. O login e o primeiro envio ao GitHub estão resolvidos; não refazer esses passos. Não solicitar segredos na conversa; usar configuração privada na hospedagem. A revisão visual deverá ser retomada quando houver acesso seguro ao navegador.
 
-A [preparação do primeiro envio](avaliacoes/preparacao-github.md) registra o estado do Git e a verificação local de 05/11/2026. Não refazer a implementação para resolver a autenticação.
+A [evidência do primeiro envio](avaliacoes/preparacao-github.md) registra autenticação, estado do Git e verificação local de 05/11/2026.
 
 **Concluído quando:** o plano estiver revisado e a prova executar perguntas novas com dados conhecidos, SQL rastreável e inferência na nuvem; evidência de acesso por terceiro, reinício e limites de cota deve ser registrada. Código local ou plano escrito não satisfazem, por si só, esse critério.
 
@@ -30,7 +30,7 @@ A [preparação do primeiro envio](avaliacoes/preparacao-github.md) registra o e
 
 | Prioridade | Decisão em aberto | Resultado necessário |
 |---|---|---|
-| P0 | Repositório, hospedagem e inferência | Revisar arquivos, criar/identificar destino e configurar contas Free para a prova externa |
+| P0 | Hospedagem e inferência | Repositório já publicado; configurar contas Free e executar a prova externa |
 | P0 | Fontes da abordagem híbrida | Selecionar fontes públicas e identificar disponibilidade de base real, condições de uso e limitações |
 | P0 | Histórico e volume | Períodos, granularidades e cobertura suficiente das janelas de análise |
 | P0 | Indicadores e políticas | Contratos das métricas e casos numéricos de referência |

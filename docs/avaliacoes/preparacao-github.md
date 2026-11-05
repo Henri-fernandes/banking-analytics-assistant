@@ -1,6 +1,6 @@
 # Preparação do primeiro envio ao GitHub
 
-Data: 05/11/2026. Destino confirmado: [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant), público. Commit inicial local criado: `0a218e6` (`feat: add initial banking analytics assistant`), com 46 arquivos. O envio remoto ainda não foi realizado.
+Data: 05/11/2026. Destino confirmado: [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant), público. Commit inicial `0a218e6` (`feat: add initial banking analytics assistant`), com 46 arquivos. Primeiro envio confirmado: `main` remota em `a4681ad3bed282e55591620e0d3f69bf9f783082`, incluindo o commit inicial e o registro de preparação.
 
 ## Verificações locais
 
@@ -10,11 +10,11 @@ Data: 05/11/2026. Destino confirmado: [Henri-fernandes/banking-analytics-assista
 - `.gitattributes` estabelece normalização de texto em LF. `.gitignore` exclui ambiente virtual, ferramentas locais, credenciais de execução e dados privados.
 - Os arquivos do primeiro commit estão enumerados em [arquivos-primeiro-commit.txt](arquivos-primeiro-commit.txt). O diff passou em `git diff --cached --check`; ambientes locais, segredos de execução e dados privados ficaram fora. Nenhum padrão de credencial foi identificado nos arquivos incluídos. Essa checagem não substitui auditoria de segurança.
 
-## Autenticação pendente
+## Autenticação e primeiro envio confirmados
 
-A consulta autenticada da API confirmou que a conta disponível não tem permissão de escrita nesse repositório (`permissions.push=false`). Foi solicitado ao autor autenticar `Henri-fernandes` pelo GitHub CLI, sem enviar senha ou token na conversa. Nenhum envio por uma conta diferente, fork ou mudança de permissões foi realizado como alternativa.
+A conta disponível inicialmente não tinha permissão de escrita. Após o autor concluir o login pelo GitHub CLI, a API confirmou usuário `Henri-fernandes` e `permissions.push=true`. Nenhuma senha ou token foi solicitado pela conversa.
 
-Depois da autenticação, conferir a conta ativa e a permissão no destino antes de executar `git push -u origin main`. Revalidar o estado remoto; se houver conteúdo novo, não usar force push. A publicação da aplicação e a inferência real continuam etapas separadas.
+O remoto foi revalidado sem branches antes do envio. `git push -u origin main` criou a branch remota; o SHA retornado pela API coincidiu com o HEAD local. A `main` local passou a acompanhar `origin/main`, sem alterações pendentes após esse envio. Foi usado o helper de credenciais do GitHub CLI apenas no comando de envio, sem gravar tokens no projeto ou alterar a configuração global. A publicação da aplicação e a inferência real continuam etapas separadas.
 
 ## Observação do ambiente
 

@@ -4,7 +4,7 @@
 
 Construir uma aplicação própria de análise conversacional interna para um banco com clientes **PF e PJ**. Analistas devem consultar dados, receber respostas verificáveis, tabelas e gráficos e aprofundar a conversa. O desenvolvimento será no VS Code com Codex; o atendimento publicado funcionará integralmente na nuvem.
 
-A prova local usa Python/Streamlit, SQLite reconstruível, três cenários sintéticos e uma referência pública do Banco Central. Há testes unittest e adaptadores Groq/Gemini; inferência real e deploy ainda não foram verificados. O Git local foi inicializado para conectar ao repositório público `Henri-fernandes/banking-analytics-assistant`; confira commit, remote e autenticação ao retomar.
+A prova local usa Python/Streamlit, SQLite reconstruível, três cenários sintéticos e uma referência pública do Banco Central. Há testes unittest e adaptadores Groq/Gemini; inferência real e deploy ainda não foram verificados. O código foi enviado ao repositório público `Henri-fernandes/banking-analytics-assistant`, na `main`; confira commit, remote e autenticação ao retomar.
 
 ## Leitura por tarefa
 

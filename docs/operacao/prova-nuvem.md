@@ -1,6 +1,6 @@
 # Executar e publicar a prova inicial
 
-Estado em 05/11/2026: aplicação implementada e testada localmente. Publicação e inferência real ainda não verificadas. O repositório público [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant) já foi criado; primeiro envio em preparação. Nenhuma chave de inferência foi configurada ou utilizada.
+Estado em 05/11/2026: aplicação implementada, testada localmente e enviada ao repositório público [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant), na `main`. Hospedagem e inferência real ainda não verificadas. Nenhuma chave de inferência foi configurada ou utilizada.
 
 ## Rodar nesta pasta no Windows
 
@@ -48,9 +48,9 @@ Cada pergunta permite no máximo uma chamada principal e uma alternativa configu
 
 ## Preparar a publicação
 
-O destino público `Henri-fernandes/banking-analytics-assistant` foi verificado. A conta usada no envio precisa ter permissão de escrita nesse repositório; a integração disponível na retomada ainda não possui essa permissão. Git local inicializado na branch `main`. README e `.gitignore` já existem localmente. A licença do código ainda não foi escolhida.
+O destino público `Henri-fernandes/banking-analytics-assistant` já contém o código. O autor concluiu o login de `Henri-fernandes` no GitHub CLI; permissão de escrita e primeiro push foram verificados. Git local acompanha `origin/main`. A licença do código ainda não foi escolhida.
 
-1. Concluir o primeiro envio ao repositório já criado, usando uma conta com permissão de escrita e revisando o que será enviado: código, testes, documentação e amostras sintéticas/públicas. Preservar o `.gitignore`; excluir `.tools/`, `.venv/`, credenciais e dados privados. A integração disponível ainda não permite escrever nesse destino.
+1. Usar o código já enviado à `main`. Em novas alterações, conferir o diff e preservar o `.gitignore`: `.tools/`, `.venv/`, credenciais e dados privados continuam fora do repositório. Não repetir criação ou primeiro push.
 2. No Community Cloud, selecionar esse repositório, arquivo `app.py` e Python 3.12. Instalar dependências a partir de `requirements.txt`; para resolução integralmente fixada, substituir seu conteúdo pelo lock após conferir instalação no Linux. Configurar segredos exclusivamente no painel do app. Não há serviço de banco externo obrigatório.
 3. Publicar somente após revisar os arquivos e confirmar acesso à conta. A aplicação inicial expõe dados sintéticos e a referência pública; não há perfis de autorização para dados reais. A abordagem híbrida não autoriza inserir registros privados nessa demonstração aberta.
 4. Conferir uma pergunta nova e registrar consumo/erros da chamada real. Sem chave ou sem plano gratuito verificado, a publicação pode servir a interface analítica, mas não comprova o atendimento conversacional por inferência.

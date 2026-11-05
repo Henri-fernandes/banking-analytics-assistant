@@ -2,9 +2,9 @@
 
 Projeto de portfólio de um assistente conversacional para analistas consultarem dados empresariais, com foco financeiro e de crédito. A experiência prevista combina respostas fundamentadas, consultas, tabelas, gráficos e aprofundamentos ao longo da conversa.
 
-Repositório público: [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant). A criação foi confirmada; o primeiro envio do código está em preparação.
+Repositório público: [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant). Código enviado à branch `main` em 05/11/2026. A publicação da aplicação na nuvem ainda está pendente.
 
-**Estado em 04/11/2026:** primeira prova implementada e testada localmente em Python/Streamlit e SQLite. Há três cenários sintéticos, referência pública do Banco Central e 37 testes passando. Inferência real, repositório remoto e deploy ainda estão pendentes. Começamos com crédito pessoal parcelado PF e capital de giro parcelado PJ, com mais produtos posteriormente. Todos os Overs usam `dias_atraso >= N`.
+**Estado em 05/11/2026:** primeira prova implementada, testada localmente e enviada ao GitHub. Usa Python/Streamlit e SQLite, três cenários sintéticos, referência pública do Banco Central e 37 testes passando. Inferência real e deploy ainda estão pendentes. Começamos com crédito pessoal parcelado PF e capital de giro parcelado PJ, com mais produtos posteriormente. Todos os Overs usam `dias_atraso >= N`.
 
 O desenvolvimento será conduzido pelo autor no **VS Code com Codex**, utilizando esta documentação como referência. A aplicação publicada continuará sendo executada na nuvem.
 
@@ -37,7 +37,7 @@ Para testar:
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-Para outro ambiente com Python 3.12, crie `.venv` e instale `requirements.lock.txt`. As instruções completas estão no guia vinculado. O Git local está inicializado; a publicação do código depende de autenticação com permissão nesse repositório.
+Para outro ambiente com Python 3.12, crie `.venv` e instale `requirements.lock.txt`. As instruções completas estão no guia vinculado. O Git local acompanha `origin/main`; os arquivos de ambiente e segredos não foram enviados.
 
 ## Capacidades implementadas na prova
 
@@ -87,6 +87,6 @@ Fine-tuning é um experimento desejado, com alvo, conjunto de avaliação e hosp
 
 ## Próximas definições
 
-O próximo trabalho é concluir o envio ao repositório já criado, configurar os provedores gratuitos e executar a prova externa. Os serviços candidatos foram reavaliados documentalmente; gratuidade nas contas e atendimento com o PC desligado ainda precisam de teste. O estado das decisões e os critérios seguintes estão em [próximos passos](docs/proximos-passos.md).
+O próximo trabalho é configurar a hospedagem e os provedores gratuitos e executar a prova externa. Os serviços candidatos foram reavaliados documentalmente; gratuidade nas contas e atendimento com o PC desligado ainda precisam de teste. O estado das decisões e os critérios seguintes estão em [próximos passos](docs/proximos-passos.md).
 
 A escolha arquitetural original não fixou fornecedores. A prova local utiliza a stack descrita acima; hospedagem e inferência real continuam sem validação funcional nas contas do autor.

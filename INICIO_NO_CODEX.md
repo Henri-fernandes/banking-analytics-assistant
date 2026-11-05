@@ -39,8 +39,8 @@ somente pelo que alterar produto, regra financeira ou custo.
 A prova local usa Python/Streamlit, SQLite, cenários sintéticos e uma
 referência pública do Banco Central. Há comandos reais de execução e testes
 no README. Inferência real e deploy ainda estão pendentes;
-o repositório público de destino agora é Henri-fernandes/banking-analytics-assistant.
-Confira o estado do Git e a autenticação antes de enviar. Retome a publicação e os testes
+o código já foi enviado à main de Henri-fernandes/banking-analytics-assistant.
+Confira o Git ao retomar, sem repetir o primeiro envio. Retome a hospedagem e os testes
 externos, preservando o que já foi implementado. Fine-tuning segue futuro.
 ```
 
