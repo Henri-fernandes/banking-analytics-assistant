@@ -1,0 +1,46 @@
+test_absent_period_different_from_empty_population (test_analytics.TestAnalytics.test_absent_period_different_from_empty_population) ... ok
+test_balance_keeps_branch_and_product_breakdown (test_analytics.TestAnalytics.test_balance_keeps_branch_and_product_breakdown) ... ok
+test_boundary_total_and_balance (test_analytics.TestAnalytics.test_boundary_total_and_balance) ... ok
+test_every_over_includes_its_boundary (test_analytics.TestAnalytics.test_every_over_includes_its_boundary) ... ok
+test_invalid_filters_never_become_sql (test_analytics.TestAnalytics.test_invalid_filters_never_become_sql) ... ok
+test_limit_never_presents_partial_total_or_contribution (test_analytics.TestAnalytics.test_limit_never_presents_partial_total_or_contribution) ... ok
+test_missing_overdue_excludes_same_population_from_rate (test_analytics.TestAnalytics.test_missing_overdue_excludes_same_population_from_rate) ... ok
+test_mob_observed_only (test_analytics.TestAnalytics.test_mob_observed_only) ... ok
+test_variation_reconciles (test_analytics.TestAnalytics.test_variation_reconciles) ... ok
+test_all_four_analytical_views_render (test_app.TestApp.test_all_four_analytical_views_render) ... 2026-11-04 16:45:57.777 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_followup_and_two_sessions_remain_independent (test_app.TestApp.test_followup_and_two_sessions_remain_independent) ... 2026-11-04 16:45:59.340 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-04 16:45:59.562 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_without_key_is_usable_and_manual_over_updates (test_app.TestApp.test_without_key_is_usable_and_manual_over_updates) ... 2026-11-04 16:46:00.142 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_all_clears_only_requested_filter_and_first_question_requires_period (test_conversation.TestConversation.test_all_clears_only_requested_filter_and_first_question_requires_period) ... ok
+test_answer_uses_validated_result_and_causal_limit (test_conversation.TestConversation.test_answer_uses_validated_result_and_causal_limit) ... ok
+test_extra_sql_bad_date_threshold_and_public_rejected (test_conversation.TestConversation.test_extra_sql_bad_date_threshold_and_public_rejected) ... ok
+test_followup_keeps_threshold_and_period (test_conversation.TestConversation.test_followup_keeps_threshold_and_period) ... ok
+test_provider_failure_is_not_business_result (test_conversation.TestConversation.test_provider_failure_is_not_business_result) ... ok
+test_unknown_branch_is_clarified_before_sql (test_conversation.TestConversation.test_unknown_branch_is_clarified_before_sql) ... ok
+test_due_today_is_zero (test_data.TestData.test_due_today_is_zero) ... ok
+test_duplicate_or_orphan_rejected (test_data.TestData.test_duplicate_or_orphan_rejected) ... ok
+test_fixture_is_read_only_and_has_exact_boundary_positions (test_data.TestData.test_fixture_is_read_only_and_has_exact_boundary_positions) ... ok
+test_missing_amount_is_not_zero (test_data.TestData.test_missing_amount_is_not_zero) ... ok
+test_multiple_installments_do_not_duplicate_principal (test_data.TestData.test_multiple_installments_do_not_duplicate_principal) ... ok
+test_negative_boolean_and_excess_payment_rejected (test_data.TestData.test_negative_boolean_and_excess_payment_rejected) ... ok
+test_partial_and_future_payment_preserve_history (test_data.TestData.test_partial_and_future_payment_preserve_history) ... ok
+test_unpaid_interest_preserves_due_date (test_data.TestData.test_unpaid_interest_preserves_due_date) ... ok
+test_bad_json_refusal_and_truncation (test_llm.TestLLM.test_bad_json_refusal_and_truncation) ... ok
+test_fallback_is_bounded_and_normalized (test_llm.TestLLM.test_fallback_is_bounded_and_normalized) ... ok
+test_http_errors_and_wrapped_timeout_are_distinct (test_llm.TestLLM.test_http_errors_and_wrapped_timeout_are_distinct) ... ok
+test_malformed_nested_response_is_a_provider_error (test_llm.TestLLM.test_malformed_nested_response_is_a_provider_error) ... ok
+test_missing_key_or_unverified_free_never_calls_network (test_llm.TestLLM.test_missing_key_or_unverified_free_never_calls_network) ... ok
+test_shared_and_session_budgets_count_failures (test_llm.TestLLM.test_shared_and_session_budgets_count_failures) ... ok
+test_structured_request_has_no_sql_or_financial_data (test_llm.TestLLM.test_structured_request_has_no_sql_or_financial_data) ... ok
+test_failed_update_preserves_snapshot_and_tampering_rejected (test_public_reference.TestPublicReference.test_failed_update_preserves_snapshot_and_tampering_rejected) ... ok
+test_invalid_public_data_rejected (test_public_reference.TestPublicReference.test_invalid_public_data_rejected) ... ok
+test_missing_file_is_not_fake_data (test_public_reference.TestPublicReference.test_missing_file_is_not_fake_data) ... ok
+test_percent_preserves_external_definition (test_public_reference.TestPublicReference.test_percent_preserves_external_definition) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 2.821s
+
+OK

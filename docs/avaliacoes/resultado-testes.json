@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-11-04T19:46:00.657691+00:00",
+  "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+  "tests": 37,
+  "successful": true,
+  "exit_code": 0,
+  "duration_seconds": 3.656,
+  "live_llm_calls": 0,
+  "provider_tests": "transportes controlados; nenhuma chave real",
+  "python": "3.12.16"
+}

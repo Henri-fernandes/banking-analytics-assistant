@@ -1,0 +1,10 @@
+.venv/
+.tools/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+.env
+data/private/
+.superpowers/
+*.sqlite
+*.log
