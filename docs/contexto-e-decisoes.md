@@ -69,6 +69,8 @@ O autor informou que o repositório GitHub de destino ainda não existe. Nenhum 
 
 O autor forneceu o [repositório público](https://github.com/Henri-fernandes/banking-analytics-assistant) e autorizou continuar. A criação remota foi verificada; o Git local já está inicializado na branch `main`, inicialmente sem commits e sem remote configurado. A conta disponível nas integrações de GitHub não tem permissão de escrita nesse destino. A autenticação de `Henri-fernandes` foi solicitada, sem solicitar senha ou token pela conversa. A preparação do primeiro commit pode prosseguir sem publicar por outra conta.
 
+O `origin` foi configurado, os 37 testes passaram novamente e os 46 arquivos revisados foram registrados no commit inicial local `0a218e6`. A autoria usa o nome da conta de destino e seu email público noreply; isso não altera a autenticação. A verificação da API ainda informa ausência de permissão de escrita para a conta autenticada. Nenhum push foi executado.
+
 O histórico anterior registra o estado da época; para a situação do envio, consulte [próximos passos](proximos-passos.md).
 
 ## Referências em vídeo e limite da evidência

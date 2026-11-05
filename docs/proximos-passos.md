@@ -13,7 +13,7 @@ Atualizado em 05/11/2026. Este é um roteiro proposto de continuidade, não um p
 - Plano autorizado e implementado localmente: Python 3.12.16, Streamlit 1.66.0 e SQLite reconstruível; comandos reais no README.
 - Três cenários sintéticos manuais e 24 observações públicas SGS 21114 carregados; base real e gerador em escala não implementados.
 - 37 testes passando, incluindo interface e duas sessões com provedor controlado; servidor local respondeu HTTP 200.
-- Repositório público [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant) criado e verificado. Git local inicializado na `main`, com `origin` configurado; primeiro commit em preparação. Envio depende de autenticação com permissão no destino. Nenhum push/deploy ou chave de inferência configurados até esta atualização.
+- Repositório público [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant) criado e verificado. Git local na `main`, com `origin` configurado e commit inicial `0a218e6` criado. Envio depende de autenticação com permissão no destino. Nenhum push/deploy ou chave de inferência configurados até esta atualização.
 - Nenhuma inferência real, teste das cotas da conta ou acesso por terceiro com PC desligado. A revisão visual de navegador foi interrompida pelo Computer Use por falta de verificação segura da URL.
 
 ## Próximo trabalho: publicar e verificar a prova na nuvem
