@@ -87,4 +87,4 @@ Estas diretrizes traduzem os objetivos da conversa em critérios técnicos propo
 - Para fine-tuning, defina alvo, hipótese, dados, licença, custo, hospedagem e comparação com o modelo-base. Ajustar embeddings/reranker é diferente de ajustar o LLM gerador.
 - Publique a configuração, o recorte dos testes e regressões observadas. Uma melhoria só pode ser declarada com resultados verificáveis; metas quantitativas ainda serão definidas.
 
-**Evidência atual:** o [relatório da prova local](avaliacoes/prova-inicial.md) registra os testes executados e os limites. A aplicação já existe; os testes de provedor usam respostas controladas. Fine-tuning, inferência real, publicação e prova externa na nuvem continuam sem execução.
+**Evidência histórica:** o [relatório da prova local](avaliacoes/prova-inicial.md) registra os testes da implementação retirada em 10/11/2026. Seus testes de provedor usavam respostas controladas. A versão atual não tem aplicação executável nem suíte ativa; consulte o [registro do recomeço](reinicio.md). As evidências da nova aplicação deverão ser produzidas durante sua construção.

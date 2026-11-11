@@ -1,3 +1,5 @@
+> Histórico: a implementação descrita foi retirada em 10/11/2026. Este documento não descreve a versão atual; consulte o [recomeço](../../reinicio.md).
+
 # Prova conversacional de carteira na nuvem — plano de implementação
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking. Execução proposta: pelo agente principal nesta sessão; sem subagentes, salvo escolha explícita do autor.

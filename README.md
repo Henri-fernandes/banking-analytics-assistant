@@ -1,92 +1,31 @@
 # Banking Analytics Assistant
 
-Projeto de portfólio de um assistente conversacional para analistas consultarem dados empresariais, com foco financeiro e de crédito. A experiência prevista combina respostas fundamentadas, consultas, tabelas, gráficos e aprofundamentos ao longo da conversa.
+Projeto de um assistente interno para um banco com clientes PF e PJ. A experiência principal será um chat que consulta dados, arquivos e regras da instituição e responde com fontes verificáveis, tabelas e gráficos quando necessários.
 
-Repositório público: [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant). Código enviado à branch `main` em 05/11/2026. A publicação da aplicação na nuvem ainda está pendente.
+## Estado em 10/11/2026
 
-**Estado em 05/11/2026:** primeira prova implementada, testada localmente e enviada ao GitHub. Usa Python/Streamlit e SQLite, três cenários sintéticos, referência pública do Banco Central e 37 testes passando. Inferência real e deploy ainda estão pendentes. Começamos com crédito pessoal parcelado PF e capital de giro parcelado PJ, com mais produtos posteriormente. Todos os Overs usam `dias_atraso >= N`.
+O autor solicitou remover a implementação anterior e recomeçar por partes. O painel Streamlit, seus módulos, amostras, testes e configurações foram retirados da versão atual. O código anterior continua no histórico do Git, no commit `afc1077`.
 
-O desenvolvimento será conduzido pelo autor no **VS Code com Codex**, utilizando esta documentação como referência. A aplicação publicada continuará sendo executada na nuvem.
+Esta versão contém documentação de contexto, decisões, pesquisa e registros históricos. Não há aplicação executável, base de dados ativa, corpus de produção, agente ou RAG implementados nesta etapa do recomeço. Os resultados de testes da prova anterior são históricos.
 
-Para retomar em outro diretório ou sessão, comece por [Início no Codex](INICIO_NO_CODEX.md). As instruções permanentes do agente estão em [AGENTS.md](AGENTS.md).
+Repositório: [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant).
 
-## Documentação de continuidade
+## Objetivo preservado
 
-- [Contexto e decisões](docs/contexto-e-decisoes.md): intenção do autor, escolhas confirmadas, sugestões e histórico relevante.
-- [Regras e validação](docs/regras-e-validacao.md): diretrizes analíticas e técnicas para as entregas.
-- [Próximos passos](docs/proximos-passos.md): estado verificável, pendências e roteiro proposto.
-- [Especificação da primeira entrega](docs/superpowers/specs/2026-11-04-primeira-entrega-design.md): base para planejamento, com perguntas, dados e exemplos numéricos.
-- [Plano da prova funcional](docs/superpowers/plans/2026-11-04-prova-conversacional-nuvem.md): entregas, arquivos e verificações da implementação.
-- [Execução e publicação](docs/operacao/prova-nuvem.md): ambiente, segredos, candidatos de hospedagem e critérios de nuvem.
-- [Evidências da prova](docs/avaliacoes/prova-inicial.md): testes executados, resultados e pendências reais.
-- [Regras da carteira](docs/metricas/carteira-v1-inclusive.md): definições versionadas utilizadas nos cálculos.
+- Conversar sobre dados, arquivos e regras da própria instituição, preservando o contexto dos aprofundamentos.
+- Combinar recuperação documental e consultas a dados, com cálculos determinísticos e fontes identificadas.
+- Aplicar controles de acesso, validação, limites e tratamento de falhas; documentos recuperados são evidência, não instruções.
+- Servir visitantes integralmente na nuvem com o computador do autor desligado e custo adicional zero.
+- Começar com crédito pessoal parcelado PF e capital de giro parcelado PJ; adicionar outros produtos depois.
+- Combinar fontes sintéticas, públicas e reais conforme disponibilidade e condições de uso. Todos os Overs internos incluem o próprio limiar: `dias_atraso >= N`.
 
-## Executar localmente
+O vídeo fornecido pelo autor é referência de experiência. Frameworks, hospedagem e provedores serão escolhidos conforme o recorte e o orçamento; a stack da prova removida não é obrigatória.
 
-Na pasta atual, com o ambiente preparado:
+## Continuidade
 
-```powershell
-.\.venv\Scripts\python.exe -m streamlit run app.py --browser.gatherUsageStats false
-```
+1. [Contexto e decisões](docs/contexto-e-decisoes.md): escolhas confirmadas e histórico.
+2. [Próximos passos](docs/proximos-passos.md): primeira parte do recomeço e pontos a definir.
+3. [Escopo de negócio](docs/escopo-negocio.md), [glossário](GLOSSARY.md) e [regras de engenharia](docs/regras-e-validacao.md): referências para discutir dados e documentos.
+4. [Registro do recomeço](docs/reinicio.md): remoção realizada, arquivos preservados e situação da publicação anterior.
 
-Abra `http://localhost:8501`. As consultas pelos controles funcionam sem chave de LLM. O chat depende de configurar um provedor Free verificado; veja o guia de operação. A demonstração identifica os dados sintéticos e mantém a referência pública separada.
-
-Para testar:
-
-```powershell
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
-```
-
-Para outro ambiente com Python 3.12, crie `.venv` e instale `requirements.lock.txt`. As instruções completas estão no guia vinculado. O Git local acompanha `origin/main`; os arquivos de ambiente e segredos não foram enviados.
-
-## Capacidades implementadas na prova
-
-Saldo por produto/filial, evolução dos Overs, contribuição para a variação e safras/MOB; tabela, gráfico e SQL com parâmetros; reconstrução histórica por eventos; regras documentais versionadas; adaptadores de interpretação Groq/Gemini com limites; contexto separado por sessão. A interface e os adaptadores foram testados com respostas controladas; isso não comprova inferência real ou publicação na nuvem.
-
-## Decisão de arquitetura
-
-O backend e a interface serão desenvolvidos como aplicação própria, aproveitando bibliotecas, APIs e serviços existentes. Essa abordagem prioriza acesso público, controle dos componentes de engenharia de IA e alternativas de fornecedores compatíveis com o orçamento.
-
-O Databricks Genie Agents foi avaliado como alternativa gerenciada. Poderá ser reconsiderado ou utilizado em um experimento comparativo futuro. Seu uso não é uma dependência aprovada do atendimento da aplicação.
-
-- [ADR-0001 — Aplicação própria como entrega principal](docs/adr/0001-aplicacao-propria.md)
-- [Pesquisa — Genie Agents versus aplicação própria](docs/pesquisas/comparacao-genie-agents-aplicacao-propria.md)
-- [Escopo de negócio e dependências dos dados](docs/escopo-negocio.md)
-- [Glossário inicial](GLOSSARY.md)
-
-## Instituição e domínios confirmados
-
-Banco/instituição financeira com atendimento a **pessoas físicas (PF) e pessoas jurídicas (PJ)**, confirmado pelo autor em 30/10/2026, e dados de clientes, filiais, propostas, contratos, parcelas, pagamentos e renegociações. Os temas desejados incluem concessão, safras/MOB/bads, carteira e saldo devedor, inadimplência/overs/write-off, PD, provisão/PDD, renegociações e reestruturações, RAROC, risco de liquidez e DRE.
-
-O [escopo de negócio](docs/escopo-negocio.md) diferencia as entidades confirmadas das fontes adicionais propostas para sustentar esses temas. A lista de temas não define, por si só, uma fórmula, um modelo de risco ou conformidade regulatória.
-
-## Restrições confirmadas
-
-- Nenhum custo adicional além do uso do Codex já contratado para desenvolver o projeto.
-- Código destinado ao GitHub e aplicação acessível por terceiros na nuvem.
-- Atendimento completo funcionando com o computador do autor desligado.
-- Desenvolvimento, preparação de dados e treinamento podem ocorrer localmente; os artefatos necessários ao atendimento devem estar disponíveis na nuvem.
-- Provedores, cotas, persistência e alternativas gratuitas precisam ser validados antes de fechar a stack.
-- Ao esgotar os recursos gratuitos, o sistema deve informar a limitação e respeitar o orçamento.
-- Projeto independente dos trabalhos existentes de Airflow, webscraping e BI.
-
-## Experiência de referência
-
-1. O analista pergunta como está a inadimplência de uma filial.
-2. O assistente resolve a definição do indicador e os filtros, consulta os dados e apresenta evolução, comparação, tabela e gráfico.
-3. O analista pede um aprofundamento por segmento ou pergunta o que contribuiu para a variação.
-4. O assistente preserva o contexto e apresenta resultados verificáveis, distinguindo decomposição da variação, hipóteses e conclusões causais.
-
-O indicador, a definição de inadimplência e as regras desse exemplo ainda serão formalizados.
-
-## Capacidades desejadas
-
-Contexto de conversa, RAG documental, embeddings, índice vetorial, ferramentas de consulta e cálculo, agente com limites de execução, saída estruturada, streaming, guardrails, cache, fallback, avaliações e observabilidade.
-
-Fine-tuning é um experimento desejado, com alvo, conjunto de avaliação e hospedagem a definir. MCP é uma extensão possível para ferramentas internas. Gráficos, consultas exibidas e exportações CSV/Excel/PDF fazem parte das funcionalidades a detalhar. Essas capacidades serão priorizadas em entregas; a lista não significa que todas precisam estar na primeira versão.
-
-## Próximas definições
-
-O próximo trabalho é configurar a hospedagem e os provedores gratuitos e executar a prova externa. Os serviços candidatos foram reavaliados documentalmente; gratuidade nas contas e atendimento com o PC desligado ainda precisam de teste. O estado das decisões e os critérios seguintes estão em [próximos passos](docs/proximos-passos.md).
-
-A escolha arquitetural original não fixou fornecedores. A prova local utiliza a stack descrita acima; hospedagem e inferência real continuam sem validação funcional nas contas do autor.
+Os documentos da prova anterior em `docs/avaliacoes/`, `docs/operacao/`, `docs/metricas/` e `docs/superpowers/` ficam como histórico identificado. Seus comandos e entregas não descrevem a versão atual.

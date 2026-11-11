@@ -4,12 +4,12 @@
 
 Construir uma aplicação própria de análise conversacional interna para um banco com clientes **PF e PJ**. Analistas devem consultar dados, receber respostas verificáveis, tabelas e gráficos e aprofundar a conversa. O desenvolvimento será no VS Code com Codex; o atendimento publicado funcionará integralmente na nuvem.
 
-A prova local usa Python/Streamlit, SQLite reconstruível, três cenários sintéticos e uma referência pública do Banco Central. Há testes unittest e adaptadores Groq/Gemini; inferência real e deploy ainda não foram verificados. O código foi enviado ao repositório público `Henri-fernandes/banking-analytics-assistant`, na `main`; confira commit, remote e autenticação ao retomar.
+Em 10/11/2026, o autor solicitou remover a implementação anterior e recomeçar por partes. A versão atual contém documentação; a prova está no histórico do Git em `afc1077`. O produto tem o chat como entrada principal, com consultas a dados, arquivos e regras. Leia o [registro do recomeço](docs/reinicio.md); confira o Git ao retomar e avance uma parte por vez.
 
 ## Leitura por tarefa
 
 - **Retomada ou mudança de direção:** leia [contexto e decisões](docs/contexto-e-decisoes.md) e [próximos passos](docs/proximos-passos.md). Continue do estado registrado, sem refazer perguntas resolvidas.
-- **Execução e testes:** leia [README](README.md), [operação da prova](docs/operacao/prova-nuvem.md) e [evidências](docs/avaliacoes/prova-inicial.md) antes de repetir instalações ou verificações.
+- **Execução e testes:** leia [README](README.md) e [registro do recomeço](docs/reinicio.md). Ainda não há aplicação ou suíte ativa; comandos e resultados da prova anterior são históricos.
 - **Dados, produtos, indicadores ou políticas:** leia [escopo de negócio](docs/escopo-negocio.md), [glossário](GLOSSARY.md) e [regras e validação](docs/regras-e-validacao.md).
 - **LLM, RAG, ferramentas, interface ou deploy:** leia [regras e validação](docs/regras-e-validacao.md). Consulte a [pesquisa de provedores](docs/pesquisas/comparacao-genie-agents-aplicacao-propria.md) antes de reutilizar suas conclusões e confira limites atuais em fontes oficiais.
 - **Reavaliar Genie:** leia o [ADR-0001](docs/adr/0001-aplicacao-propria.md). A entrega principal escolhida é aplicação própria.
@@ -25,6 +25,6 @@ A prova local usa Python/Streamlit, SQLite reconstruível, três cenários sint�
 
 ## Entrega e evidência
 
-Implemente por entregas verificáveis, com métricas e dados de referência. Os comandos reais de execução e unittest estão no README. Ao concluir, informe mudanças, verificações realizadas e limitações reais. Uma previsão de arquitetura não conta como funcionalidade implementada, e um resultado gravado deve ser identificado como exemplo.
+Implemente por entregas verificáveis, com métricas e dados de referência. Quando houver código novo, registre no README seus comandos reais de execução e testes. Ao concluir, informe mudanças, verificações realizadas e limitações reais. Uma previsão de arquitetura não conta como funcionalidade implementada, e um resultado gravado deve ser identificado como exemplo.
 
 Mantenha instruções permanentes neste arquivo curtas; detalhes ficam nos documentos vinculados. Preserve caminhos relativos para que a pasta possa ser movida para outro computador ou repositório.

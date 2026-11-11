@@ -1,6 +1,6 @@
 # Escopo de negócio — assistente interno de um banco
 
-Atualizado em 04/11/2026. Este documento registra o recorte informado pelo autor e identifica decisões pendentes. A arquitetura detalhada, as fórmulas e o plano de implementação ainda serão definidos.
+Atualizado em 10/11/2026. Este documento registra o recorte informado pelo autor e identifica decisões pendentes. A implementação anterior foi removida a pedido do autor; referências à prova abaixo são históricas. O novo modelo, regras adicionais e plano de construção serão especificados por partes; consulte [próximos passos](proximos-passos.md).
 
 ## Definições confirmadas
 

@@ -1,3 +1,5 @@
+> Histórico: a implementação descrita foi retirada em 10/11/2026. Este documento não descreve a versão atual; consulte o [recomeço](../reinicio.md).
+
 # Regras da carteira de demonstração
 
 Regra: carteira-v1-inclusive

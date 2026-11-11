@@ -1,3 +1,5 @@
+> Histórico: a implementação descrita foi retirada em 10/11/2026. Este documento não descreve a versão atual; consulte o [recomeço](../../reinicio.md).
+
 # Primeira entrega — carteira de crédito PF e PJ
 
 Data: 04/11/2026. Estado: execução autorizada e prova implementada localmente, com limiar inclusivo para todos os Overs. Inferência real e deploy ainda pendentes; consulte as [evidências](../../avaliacoes/prova-inicial.md).

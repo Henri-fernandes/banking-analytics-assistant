@@ -1,70 +1,34 @@
 # Estado atual e próximos passos
 
-Atualizado em 05/11/2026. Este é um roteiro proposto de continuidade, não um plano técnico fechado. As decisões confirmadas estão em [contexto e decisões](contexto-e-decisoes.md).
+Atualizado em 10/11/2026.
 
-## Estado verificável
+## Decisão atual
 
-- Documentação inicial, comparação com Genie e ADR-0001 preparados.
-- Banco, atendimento PF/PJ, aplicação própria, custo adicional zero e atendimento na nuvem confirmados.
-- Crédito pessoal parcelado PF e capital de giro parcelado PJ confirmados; novos produtos serão adicionados depois.
-- Recorte inicial confirmado: analista de carteira/crédito; saldo, evolução da inadimplência, contribuição para a variação e safras em mesma idade.
-- Abordagem híbrida confirmada: dados sintéticos, públicos e reais. A prova já tem amostras sintéticas e referência pública; nenhuma base real privada foi disponibilizada.
-- Regra geral dos Overs confirmada: OverN inclui atraso a partir de N dias, inclusive (`dias_atraso >= N`); vale para Over90 e os demais limiares.
-- Plano autorizado e implementado localmente: Python 3.12.16, Streamlit 1.66.0 e SQLite reconstruível; comandos reais no README.
-- Três cenários sintéticos manuais e 24 observações públicas SGS 21114 carregados; base real e gerador em escala não implementados.
-- 37 testes passando, incluindo interface e duas sessões com provedor controlado; servidor local respondeu HTTP 200.
-- Repositório público [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant) com código enviado. Primeiro push da `main` confirmado em 05/11/2026, com `0a218e6` e `a4681ad`; SHA remoto conferido contra o local. Autenticação de `Henri-fernandes` com permissão de escrita verificada. Deploy e chaves de inferência ainda pendentes.
-- Nenhuma inferência real, teste das cotas da conta ou acesso por terceiro com PC desligado. A revisão visual de navegador foi interrompida pelo Computer Use por falta de verificação segura da URL.
+O autor solicitou remover a implementação anterior do repositório e recomeçar por partes. A versão atual preserva documentação, decisões e pesquisa. O painel, os módulos Python, dados de demonstração, testes e configurações da prova foram retirados. O histórico do Git permite consultar o código anterior em `afc1077`.
 
-## Próximo trabalho: publicar e verificar a prova na nuvem
+Não há uma nova aplicação executável, base ativa, corpus, agente ou RAG nesta versão. Os relatórios de testes anteriores são históricos. Consulte o [registro do recomeço](reinicio.md).
 
-O autor autorizou a execução do [plano da prova funcional](superpowers/plans/2026-11-04-prova-conversacional-nuvem.md). A implementação local e suas evidências estão no [relatório](avaliacoes/prova-inicial.md). Retome a etapa externa do [guia operacional](operacao/prova-nuvem.md); não refaça o núcleo já testado.
+## Objetivo confirmado
 
-Configurar hospedagem e provedor sem custo, a partir do código já enviado à `main`. O login e o primeiro envio ao GitHub estão resolvidos; não refazer esses passos. Não solicitar segredos na conversa; usar configuração privada na hospedagem. A revisão visual deverá ser retomada quando houver acesso seguro ao navegador.
+Assistente interno em formato de chat para um banco PF/PJ: consultar dados, arquivos e regras; combinar fontes verificáveis; manter contexto; apresentar tabelas e gráficos quando necessários. Aplicar controles de acesso, validação, limites, avaliação e tratamento de falhas. Atendimento na nuvem, com o PC desligado e custo adicional zero.
 
-A [evidência do primeiro envio](avaliacoes/preparacao-github.md) registra autenticação, estado do Git e verificação local de 05/11/2026.
+Produtos iniciais: crédito pessoal parcelado PF e capital de giro parcelado PJ. Origem híbrida das fontes e Overs inclusivos permanecem confirmados. Não há base privada fornecida. Novos produtos, regras financeiras e fornecedores dependem do recorte discutido com o autor.
 
-**Concluído quando:** o plano estiver revisado e a prova executar perguntas novas com dados conhecidos, SQL rastreável e inferência na nuvem; evidência de acesso por terceiro, reinício e limites de cota deve ser registrada. Código local ou plano escrito não satisfazem, por si só, esse critério.
+## Primeira parte proposta
 
-## Pendências por dependência
+Alinhar um pequeno conjunto de perguntas que represente a experiência desejada. Para cada uma, identificar dados, documentos e evidências necessárias. A partir disso, especificar o modelo dos dados e o inventário documental antes de iniciar a construção.
 
-| Prioridade | Decisão em aberto | Resultado necessário |
-|---|---|---|
-| P0 | Hospedagem e inferência | Repositório já publicado; configurar contas Free e executar a prova externa |
-| P0 | Fontes da abordagem híbrida | Selecionar fontes públicas e identificar disponibilidade de base real, condições de uso e limitações |
-| P0 | Histórico e volume | Períodos, granularidades e cobertura suficiente das janelas de análise |
-| P0 | Indicadores e políticas | Contratos das métricas e casos numéricos de referência |
-| P0 | Viabilidade gratuita da nuvem | Pequena consulta e resposta novas acessíveis por terceiro |
-| P1 | Stack principal e alternativas | Candidatos revalidados documentalmente em 04/11/2026; faltam compatibilidade funcional e teste nas contas do autor |
-| P1 | Modelo de dados e camadas | Entidades, eventos, posições, qualidade e atualização |
-| P1 | Corpus e recuperação | Documentos, vigências, métodos candidatos e avaliação |
-| P1 | Interface e exportações | Formato das respostas, interações e arquivos |
-| P2 | Alvo do fine-tuning | Hipótese, dataset, avaliação e hospedagem compatível |
-| P2 | MCP | Uso concreto e benefício frente às ferramentas já implementadas |
+Resultado esperado desta parte: uma especificação revisável do primeiro recorte, distinguindo decisões confirmadas, políticas fictícias propostas e escolhas em aberto. A referência em vídeo orienta a experiência; sua stack não está aprovada por associação.
 
-P0/P1/P2 indica ordem de resolução proposta, não obrigação de implementar todos os itens de uma vez. Identidade visual e nome do banco podem ser escolhidos sem bloquear a definição dos dados.
+## Partes seguintes, ainda a detalhar
 
-## Sequência de entregas proposta
+1. Construir e validar dados coerentes e documentos versionados do recorte escolhido.
+2. Validar consultas e recuperação documental separadamente, com gabaritos e fontes esperadas.
+3. Integrar agente e interface de chat, combinando dados e documentos e mantendo o contexto.
+4. Avaliar guardrails, respostas, acesso, falhas e consumo; verificar operação na nuvem.
 
-| Etapa | Trabalho | Evidência de conclusão |
-|---|---|---|
-| 1. Produto e regras | Produtos, perguntas, métricas e limites | Recorte definido e casos de referência verificáveis |
-| 2. Prova na nuvem | Aplicação mínima, consulta e inferência | Visitante executa pergunta nova com PC do autor desligado, dentro do plano gratuito |
-| 3. Dados e corpus | Ingestão/geração, qualidade, camadas e documentos | Recarga reproduzível, integridade e reconciliações aprovadas para o recorte |
-| 4. Backend analítico | Métricas, ferramentas, contexto, recuperação e agente | Perguntas de referência corretas com consultas e fontes rastreáveis |
-| 5. Interface | Gráficos, tabelas, streaming e arquivos priorizados | Mesmos dados validados em resposta, visualização e exportação |
-| 6. Robustez | Avaliação, acesso, observabilidade, cache e fallback | Casos de erro e de acesso cobertos; relatório de qualidade e consumo |
-| 7. Experimentos | Recuperação, modelos e fine-tuning relevante | Comparação reproduzível e artefato executável no ambiente previsto |
-| 8. Publicação | Documentação, demonstração e reprodução | Link acessível, instalação descrita e limites identificados |
+Essas partes são um roteiro, não autorização para implementar tudo de uma vez. O autor pediu avançar por partes. Os controles acompanham dados, ferramentas e recuperação desde sua criação.
 
-Avaliação e observabilidade acompanham as etapas; a etapa 6 consolida os testes. A sequência dos módulos financeiros está no [escopo de negócio](escopo-negocio.md). Esboçar o contrato da interface antes do backend completo ajuda a definir a saída de tabelas e gráficos.
+## Publicação anterior
 
-## Decisão de stack: como comparar
-
-Para cada dependência crítica, registrar função, candidato principal, alternativa, limites gratuitos, autenticação exigida do visitante, recursos necessários, persistência, suporte ao modelo ajustado quando aplicável e resultado do teste. Registrar data e fontes oficiais, pois condições de provedores mudam.
-
-A [pesquisa inicial](pesquisas/comparacao-genie-agents-aplicacao-propria.md) contém as evidências já coletadas. Entre os pontos a rever estão acesso público no Databricks, cotas de APIs, restrições de LoRA na Groq, compatibilidade de saída estruturada/streaming/ferramentas, elegibilidade ZeroGPU e hibernação/persistência das hospedagens. A presença de um serviço na pesquisa não autoriza concluir que ele atende o projeto.
-
-## Atualização de estado
-
-Após uma decisão, atualizar seu documento de origem e este estado/roteiro quando houver mudança de prioridade. Registrar escolhas arquiteturais relevantes em ADRs curtos. Ao implementar, documentar os comandos reais de execução e teste e os resultados obtidos. Quando um teste falhar, preservar a evidência e revisar a hipótese sem marcar a etapa como concluída.
+A captura do autor mostrou o painel no Community Cloud, mas nenhuma URL foi fornecida e não houve prova independente de acesso/inferência. A remoção de `app.py` torna a configuração antiga de deploy incompatível com a versão atual. A instância hospedada não foi excluída por esta alteração no Git; qualquer cópia ainda servida corresponde à prova retirada.

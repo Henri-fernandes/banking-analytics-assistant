@@ -1,6 +1,10 @@
 # Contexto e decisões da conversa
 
-Registro de continuidade preparado em 30/10/2026 e atualizado em 05/11/2026. Fonte das decisões: conversa com o autor. As referências técnicas de terceiros estão na pesquisa vinculada e têm validade temporal.
+Registro de continuidade preparado em 30/10/2026 e atualizado em 10/11/2026. Fonte das decisões: conversa com o autor. As referências técnicas de terceiros estão na pesquisa vinculada e têm validade temporal.
+
+## Estado que orienta a retomada
+
+Em 10/11/2026, o autor pediu remover a implementação anterior e recomeçar por partes. A versão atual contém documentação; o painel e seu código, dados e testes foram retirados. O histórico do Git preserva a prova anterior em `afc1077`. Os registros datados abaixo descrevem a situação da época, não capacidades atuais. Consulte [próximos passos](proximos-passos.md) e [registro do recomeço](reinicio.md).
 
 ## Por que o projeto existe
 
@@ -38,6 +42,7 @@ A proposta inicial do assistente de analisar empresas abertas e produzir parecer
 | D13 | Over90 inclui atrasos a partir de 90 dias, inclusive | Confirmado pelo autor em 04/11/2026: `dias_atraso >= 90`; 89 dias fica fora, 90 e 91 dias entram. Demais componentes da métrica continuam em revisão |
 | D14 | Todos os indicadores Over usam limiar inclusivo | Confirmado em 04/11/2026: OverN enquadra `dias_atraso >= N`; aplicar a mesma convenção aos demais limiares, preservando as definições originais de fontes externas |
 | D15 | Repositório `banking-analytics-assistant` público | Destino confirmado pelo autor: `Henri-fernandes/banking-analytics-assistant`; código enviado e verificado na `main` em 05/11/2026; deploy da aplicação ainda pendente |
+| D16 | Remover a implementação anterior e recomeçar por partes | Confirmado em 10/11/2026; preservar decisões/pesquisa e histórico do Git. A próxima parte é especificar fontes e perguntas do recorte, antes de nova implementação |
 
 ## Escopo desejado, com detalhamento pendente
 
@@ -76,6 +81,12 @@ Após o autor concluir o login, a API confirmou `Henri-fernandes` com permissão
 O histórico anterior registra o estado da época; para a situação do envio, consulte [próximos passos](proximos-passos.md).
 
 ## Referências em vídeo e limite da evidência
+
+Em 09/11/2026, o autor reafirmou que a entrega é um chat interno capaz de consultar dados, arquivos e regras, com RAG, agente e guardrails. Confirmou a prioridade de construir a base de dados e o corpus de regras/documentos antes de integrar o agente. O painel e os cenários de teste existentes não satisfazem essa entrega. O próximo foco deixa de ser apenas habilitar inferência/publicação da prova e passa a ser a preparação dessas fontes e sua validação.
+
+O autor também forneceu a [aula de agentes RAG da Hashtag Programação](https://www.youtube.com/watch?v=XqG3RN6VzDw&t=6274s) como referência da experiência desejada, com complexidade adicional no nosso projeto. A análise e a comparação por componente estão em [estado e referência RAG](avaliacoes/estado-e-referencia-rag.md). O vídeo não impõe ferramentas ou fornecedores.
+
+Durante a publicação, o autor enviou uma captura da aplicação no Community Cloud, mostrando o cenário de variação de 30% para 40% e aviso de IA desabilitada. Isso evidencia a interface carregada pelo autor; sem URL fornecida, não comprova acesso público independente ou atendimento completo na nuvem.
 
 O autor forneceu os vídeos [Erick Wendel](https://www.instagram.com/p/DcqwbZ2gGHs/) e [Beer and Code](https://www.instagram.com/reel/DfFO_r1IPLB/). Foram processados com a habilidade watch e analisados visualmente. Não havia legendas disponíveis e a fala não foi transcrita.
 

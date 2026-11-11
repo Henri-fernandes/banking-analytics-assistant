@@ -1,3 +1,5 @@
+> Histórico: a implementação descrita foi retirada em 10/11/2026. Este documento não descreve a versão atual; consulte o [recomeço](../reinicio.md).
+
 # Execução — plano: docs/superpowers/plans/2026-11-04-prova-conversacional-nuvem.md
 
 Início: 04/11/2026. Execução autorizada pelo autor, pelo agente principal nesta sessão.

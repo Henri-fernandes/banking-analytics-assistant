@@ -1,3 +1,5 @@
+> Histórico: a implementação descrita foi retirada em 10/11/2026. Este documento não descreve a versão atual; consulte o [recomeço](../reinicio.md).
+
 # Preparação do primeiro envio ao GitHub
 
 Data: 05/11/2026. Destino confirmado: [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant), público. Commit inicial `0a218e6` (`feat: add initial banking analytics assistant`), com 46 arquivos. Primeiro envio confirmado: `main` remota em `a4681ad3bed282e55591620e0d3f69bf9f783082`, incluindo o commit inicial e o registro de preparação.

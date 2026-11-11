@@ -1,3 +1,5 @@
+> Histórico: a implementação descrita foi retirada em 10/11/2026. Este documento não descreve a versão atual; consulte o [recomeço](../reinicio.md).
+
 # Evidências da prova inicial
 
 Data: 04/11/2026. Escopo: implementação local da primeira prova, sem implantação externa. A [execução e suas decisões](execucao-inicial.md) e o [plano](../superpowers/plans/2026-11-04-prova-conversacional-nuvem.md) permitem retomar o trabalho.

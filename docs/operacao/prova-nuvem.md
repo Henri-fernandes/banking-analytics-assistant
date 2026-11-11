@@ -1,3 +1,5 @@
+> Histórico: a implementação descrita foi retirada em 10/11/2026. Este documento não descreve a versão atual; consulte o [recomeço](../reinicio.md).
+
 # Executar e publicar a prova inicial
 
 Estado em 05/11/2026: aplicação implementada, testada localmente e enviada ao repositório público [Henri-fernandes/banking-analytics-assistant](https://github.com/Henri-fernandes/banking-analytics-assistant), na `main`. Hospedagem e inferência real ainda não verificadas. Nenhuma chave de inferência foi configurada ou utilizada.
