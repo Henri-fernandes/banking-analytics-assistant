@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Assistente de crédito</title>
+  <link rel="stylesheet" href="/chat.css">
+  <script src="/formatacao.js" defer></script>
+  <script src="/graficos.js" defer></script>
+  <script src="/chat.js" defer></script>
+</head>
+<body>
+<div class="aplicacao" id="aplicacao">
+  <header class="cabecalho">
+    <div class="identidade">
+      <span class="simbolo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h14a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H9l-5 4V5a1 1 0 0 1 1-1Z"/><path d="M8 9h8M8 13h5"/></svg></span>
+      <span>Assistente de crédito</span>
+    </div>
+    <nav class="acoes" aria-label="Ações da conversa">
+      <a class="material" href="/regras.pdf" target="_blank" rel="noopener">Regras da base</a>
+      <a class="material" href="/dados.xlsx" download="base_credito_v1.xlsx">Planilha</a>
+      <button class="nova" id="nova" type="button"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12"/></svg><span>Nova conversa</span></button>
+    </nav>
+  </header>
+
+  <main class="conteudo" id="conteudo">
+    <section class="inicio" id="inicio" aria-labelledby="titulo">
+      <div class="contexto">Crédito pessoal PF e capital de giro PJ</div>
+      <h1 id="titulo">O que você quer analisar?</h1>
+      <p class="introducao">Consulte a carteira e as regras de crédito em uma conversa.</p>
+      <div class="sugestoes" aria-label="Sugestões de perguntas">
+        <button type="button" data-pergunta="Qual era o Over90 PJ em junho de 2026? Explique a regra do PDF.">Over90 de PJ em junho de 2026</button>
+        <button type="button" data-pergunta="Como funciona a renegociação nesta base?">Como funciona a renegociação?</button>
+      </div>
+    </section>
+    <section class="mensagens" id="mensagens" role="log" aria-label="Mensagens da conversa" aria-live="polite" aria-relevant="additions text"></section>
+  </main>
+
+  <div class="rodape">
+    <div class="erro" id="erro" role="alert" hidden></div>
+    <form class="compositor" id="formulario">
+      <label class="sr-only" for="pergunta">Sua mensagem</label>
+      <textarea id="pergunta" name="mensagem" rows="1" maxlength="2000" placeholder="Pergunte sobre a carteira ou as regras…" aria-describedby="ajuda"></textarea>
+      <button id="enviar" type="submit" aria-label="Enviar mensagem" disabled><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+    </form>
+    <div class="nota"><span>Base de demonstração com dados fictícios.</span><span id="ajuda">Enter para enviar. Shift + Enter para uma nova linha.</span></div>
+    <noscript>Ative o JavaScript para utilizar a conversa.</noscript>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.venv/
+.tools/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+.env
+data/private/
+.superpowers/
+*.sqlite
+*.log
+tmp/
+*.inspect.ndjson
+~$*
+
+# Documentação de trabalho local; o README da raiz é a documentação pública.
+*.md
+!/README.md
+/docs/
+/data/
+/financeiro/
+/scripts/
+/assistente-interno-dados-contexto-codex/
+/.streamlit/
+.env.*
+*.zip
+
+# Testes e avaliações de desenvolvimento permanecem locais.
+/tests/
+/avaliacoes/
